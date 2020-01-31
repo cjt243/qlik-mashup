@@ -6,7 +6,7 @@ CORS(app)
 
 @app.route("/")
 def home():
-    return render_template("main.html")
+    return render_template("index.html")
 
 @app.route("/cullin")
 def salvador():

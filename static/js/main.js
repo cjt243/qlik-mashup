@@ -1,6 +1,6 @@
 var config = {
     host: "win-h4etcap5m3h", //the address of your Qlik Engine Instance
-    prefix: "/", //the virtual proxy to be used. for example "/anonymous/"
+    prefix: "/mashup/", //the virtual proxy to be used. for example "/anonymous/"
     port: "443", //the port to be used if different from the current port
     isSecure: true //should be true if connecting over HTTPS
 };
@@ -14,6 +14,8 @@ require.config({
       qlik.setOnError( function ( error ) {
           console.log(error);
       });
-  });
 
-var app = qlik.openApp('ffa1241e-9e27-4d7b-9eaf-70feeca6edb2', config);
+
+      var app = qlik.openApp('ffa1241e-9e27-4d7b-9eaf-70feeca6edb2', config);
+
+});
