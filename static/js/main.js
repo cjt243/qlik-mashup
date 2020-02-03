@@ -16,6 +16,7 @@ require.config({
       });
 
 
-      var app = qlik.openApp('ffa1241e-9e27-4d7b-9eaf-70feeca6edb2', config);
+      var app = qlik.openApp('05609216-e170-421a-a284-e495c1606b93', config);
+      app.getObject('QV01','KxXmqg');
 
 });
