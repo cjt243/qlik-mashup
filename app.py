@@ -1,4 +1,5 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, make_response
+from py_auth import *
 # from flask_cors import CORS
 
 app = Flask(__name__)
@@ -6,7 +7,9 @@ app = Flask(__name__)
 
 @app.route("/")
 def home():
-    return render_template("index.html")
+    resp = make_response(render_template("index.html"))
+    resp.set_cookie('X-Qlik-Session-Mashup',getSession(),samesite=None)
+    return resp
 
 if __name__ == "__main__":
     app.run(debug=True)
